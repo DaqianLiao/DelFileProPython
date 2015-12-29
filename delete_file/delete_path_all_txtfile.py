@@ -1,4 +1,3 @@
-import gzip
 import os.path
 
 #解压指定路径下的所有文件
@@ -7,7 +6,7 @@ def  delete_xls_all(log_path):
         for filename in filenames:
             if os.path.splitext(filename)[1] == '.txt':
                filepath = os.path.join(dirpath, filename)
-               delfile(filepath) # 删除文件
+               delfile(filepath)
                print(filepath, ' : this file is deleted!')
 
 #删除单个文件          
@@ -15,7 +14,6 @@ def delfile(fname):
     if os.path.exists(fname):
         os.remove(fname)
 
-               
 def main():
     log_path=input('enter a path:')
     if os.path.exists(log_path):#判断路径是否存在 异常处理1
@@ -26,8 +24,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-               
-
-
-

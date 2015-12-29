@@ -1,4 +1,3 @@
-import gzip
 import os.path
 
 #解压指定路径下的所有文件
@@ -14,8 +13,7 @@ def  delete_xls_all(log_path):
 def delfile(fname):
     if os.path.exists(fname):
         os.remove(fname)
-               
-               
+
 def main():
     log_path=input('enter a path:')
     #log_path = 'E:\\python_log\\test_gz_file'
@@ -27,8 +25,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-               
-
-
-
