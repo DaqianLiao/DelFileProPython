@@ -5,8 +5,8 @@ import os.path
 def  delete_xls_all(log_path):
     for dirpath, dirnames, filenames in os.walk(log_path):
         for filename in filenames:
-##            if os.path.splitext(filename)[1] == '.xls':
-            if 'remalloc' in filename:
+            if os.path.splitext(filename)[1] == '.xls':
+##            if 'remalloc' in filename:
                filepath = os.path.join(dirpath, filename)
                delfile(filepath) # 删除文件
                print(filepath,' : this file is deleted!')
